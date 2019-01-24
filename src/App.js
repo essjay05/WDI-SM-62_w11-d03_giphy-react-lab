@@ -6,10 +6,9 @@ import Search from './components/Search';
 
 export default class App extends Component {
 
-
   render () {
     return (
-      <body>
+      <div>
         <Navbar />
         <HelloWorld />
         <main className="container">
@@ -17,7 +16,7 @@ export default class App extends Component {
           
           
         </main>
-      </body>
+      </div>
     )
   }
 }
