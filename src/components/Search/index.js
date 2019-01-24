@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
+import axios from 'axios';
+import Gifs from '../Gifs';
 
 export default class Search extends Component {
     state = {
-        gif: undefined,
+        gif: [],
         search: " "
       }
     
@@ -10,8 +12,14 @@ export default class Search extends Component {
     
     handleSubmit = (e) => {
         e.preventDefault();
-        let {search } = this.state;
-        debugger;
+        let { gif, search } = this.state;
+        axios.get(`http://api.giphy.com/v1/gifs/search?q=${search}&api_key=OcA9OeImWUvYzwIICTGl5yufd98dKNky`)
+            .then(({ data }) => {
+                debugger
+                this.setState({ gif: data.data })
+                console.log(data.data.img)
+                debugger
+            })
     }
     render () {
         let { gif, search } = this.state
@@ -31,7 +39,7 @@ export default class Search extends Component {
                 </div>
                 <button type="submit" className="btn btn-primary">Submit</button>
             </form>
-
+            <Gifs gif={gif}/>
         </main>
     )
     }

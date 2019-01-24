@@ -3,6 +3,7 @@ import axios from 'axios';
 import Navbar from './components/Navbar';
 import HelloWorld from './components/HelloWorld';
 import Search from './components/Search';
+import Gifs from './components/Gifs';
 
 export default class App extends Component {
 
@@ -12,9 +13,12 @@ export default class App extends Component {
         <Navbar />
         <HelloWorld />
         <main className="container">
-        <Search />
+          <Search />
+          <div className="gifResults">
           
           
+          </div>
+            
         </main>
       </div>
     )
