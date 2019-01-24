@@ -1,11 +1,20 @@
 import React, { Component } from 'react';
+import axios from 'axios';
+import Navbar from './components/Navbar';
+import HelloWorld from './components/HelloWorld';
 
 export default class App extends Component {
+
+
   render () {
     return (
-      <main className="container">
-        <h1>Giphy Search</h1>
-      </main>
+      <body>
+        <Navbar />
+        <main className="container">
+          <HelloWorld />
+          
+        </main>
+      </body>
     )
   }
 }
