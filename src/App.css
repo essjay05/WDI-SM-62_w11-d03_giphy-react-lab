@@ -30,3 +30,10 @@
     transform: rotate(360deg);
   }
 }
+
+.jumbotron {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

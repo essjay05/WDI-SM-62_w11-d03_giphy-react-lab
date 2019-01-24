@@ -10,8 +10,9 @@ export default class App extends Component {
     return (
       <body>
         <Navbar />
+        <HelloWorld />
         <main className="container">
-          <HelloWorld />
+          
           
         </main>
       </body>
