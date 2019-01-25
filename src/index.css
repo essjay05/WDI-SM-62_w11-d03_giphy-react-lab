@@ -13,6 +13,13 @@ code {
     monospace;
 }
 
+.jumbotron {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .gifBox {
   display: flex;
   flex-direction: column;
@@ -20,7 +27,8 @@ code {
   justify-content: center;
   width: 250px;
   height: 400px;
-  border: 1px grey;
+  border: 2px grey;
+
 }
 
 .gif {
