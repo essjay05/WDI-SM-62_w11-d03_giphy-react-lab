@@ -8,7 +8,11 @@ export default ({ gif }) => {
     return (
         <div className="gif">
             {gif.map((gif, index) => {
-                return <img key={index} src={gif.images.original.url} alt="not available" height="200px" width="250px"/>
+                return<div className="gifBox">
+                    <img key={index} src={gif.images.original.url} alt="not available" height="200px" width="250px"/>   
+                    <h6 key={index}>{gif.title}</h6>
+                    <button>View</button>  
+                </div>  
             })}
         </div>
 

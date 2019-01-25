@@ -16,8 +16,8 @@ export default class Search extends Component {
         axios.get(`http://api.giphy.com/v1/gifs/search?q=${search}&api_key=OcA9OeImWUvYzwIICTGl5yufd98dKNky`)
             .then(({ data }) => {
                 debugger
-                this.setState({ gif: data.data })
-                console.log(data.data.img)
+                this.setState({ gif: data.data, search: "" })
+            
                 debugger
             })
     }
